@@ -2,12 +2,9 @@ package br.pro.ramon.folha;
 
 public class Faxineiro extends FuncionarioFixo {
 
-    public static final String DIURNO = "diurno";
-    public static final String NOTURNO = "noturno";
+    private Turno turno;
 
-    private String turno;
-
-    public Faxineiro(String nome, double valor, String turno) {
+    public Faxineiro(String nome, double valor, Turno turno) {
         super(nome, valor);
         this.turno = turno;
     }
@@ -16,7 +13,7 @@ public class Faxineiro extends FuncionarioFixo {
     public double getSalario() {
         double adicional = 0;
 
-        if (turno.equals(NOTURNO)) {
+        if (turno == Turno.NOTURNO) {
             adicional = 0.05 * super.getSalario();
         }
 
