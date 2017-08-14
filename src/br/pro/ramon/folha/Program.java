@@ -17,8 +17,8 @@ public class Program {
         funcionarios.add(new ProgramadorPl("Augusto", 160));
         funcionarios.add(new ProgramadorSr("Alice", 128));
         funcionarios.add(new Vendedor("Thiago", 10000));
-        funcionarios.add(new Faxineiro("Ana", 720, "diurno"));
-        funcionarios.add(new Faxineiro("João", 680, "noturno"));
+        funcionarios.add(new Faxineiro("Ana", 720, Faxineiro.DIURNO));
+        funcionarios.add(new Faxineiro("João", 680, Faxineiro.NOTURNO));
 
         System.out.print("Ordenar por (N)ome ou (S)alário? ");
         String opcao = console.nextLine();
